@@ -4,6 +4,8 @@
 ## Write a short comment describing this function
 
 makeCacheMatrix <- function(x = matrix()) {
+    # Creates class-like object with data getters and setters (OOP languages incapsulation analogy)
+
     inverse = NULL
     
     get = function() x
@@ -25,7 +27,7 @@ makeCacheMatrix <- function(x = matrix()) {
 ## Write a short comment describing this function
 
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
+    # gets inverse from cache, if it has not been calculated yet, calculates, sets to the cache and returns cached matrix inversion.
     inverse = x$get_inverse()
     
     if (is.null(inverse)){
